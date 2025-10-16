@@ -45,3 +45,25 @@ $RECYCLE.BIN/
 dist/
 build/
 
+# ========================================
+# Internal Planning Files (NOT for deployment)
+# ========================================
+
+# Chat/conversation history
+chat-history.txt
+
+# Original planning documents (backups - not needed for site)
+campaign1.md
+campaign2.md
+strategy1.md
+segmentation.md
+
+# Original HTML files (replaced by campaign-strategy.html and campaign-calendar.html)
+HA_EOY_revised.html
+HA_EOY_Campaign_Visual_Calendar.html
+
+# Any other internal planning files
+*-internal.md
+*-draft.md
+*-notes.md
+
