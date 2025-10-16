@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Strategy | Hispanic Alliance 15th Anniversary</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #2F2F2F;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #BD1E4D 0%, #F82466 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+        }
+        
+        .strategy-box {
+            background: #E8F5E9;
+            border: 3px solid #57B847;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .strategy-box h2 {
+            color: #57B847;
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+        
+        .strategy-box .big-idea {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2F2F2F;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .comparison-box {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .old-way {
+            background: #FFEBEE;
+            border: 2px solid #DA3335;
+        }
+        
+        .new-way {
+            background: #E8F5E9;
+            border: 2px solid #57B847;
+        }
+        
+        .comparison-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .old-way h3 {
+            color: #DA3335;
+        }
+        
+        .new-way h3 {
+            color: #57B847;
+        }
+        
+        .legend {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        
+        .vip { background: #BD1E4D; }
+        .active { background: #F7921E; }
+        .lapsed { background: #01A2C4; }
+        .first-time { background: #57B847; }
+        .prospect { background: #4D3F99; }
+        .event { background: #FFCC05; color: #2F2F2F; }
+        .deadline { background: #DA3335; }
+        .maintenance { background: #9E9E9E; }
+        
+        .month-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .month-header {
+            background: #BD1E4D;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .week {
+            margin-bottom: 25px;
+            border-left: 4px solid #D8D8D8;
+            padding-left: 20px;
+        }
+        
+        .week-label {
+            font-size: 1.1rem;
+            color: #595959;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .task {
+            background: #FBFBFB;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border-left: 4px solid #BD1E4D;
+            display: grid;
+            grid-template-columns: 120px 150px 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .task-date {
+            font-weight: bold;
+            color: #BD1E4D;
+            font-size: 1.1rem;
+        }
+        
+        .task-segment {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .task-description {
+            color: #2F2F2F;
+        }
+        
+        .task-description strong {
+            color: #BD1E4D;
+        }
+        
+        .notes {
+            background: #FFF9E6;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-left: 4px solid #FFCC05;
+        }
+        
+        .notes-title {
+            font-weight: bold;
+            color: #2F2F2F;
+            margin-bottom: 5px;
+        }
+        
+        .milestone {
+            background: #E8F5E9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #57B847;
+        }
+        
+        .milestone-title {
+            font-weight: bold;
+            color: #57B847;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .light-week {
+            background: #F5F5F5;
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px dashed #9E9E9E;
+            margin-bottom: 15px;
+        }
+        
+        .light-week-title {
+            font-weight: bold;
+            color: #9E9E9E;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .task {
+                grid-template-columns: 1fr;
+            }
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/images/15ha-mosaic-full-color-white-rgb.svg" alt="Hispanic Alliance 15th Anniversary Logo" class="logo-img">
+                <div class="brand-text">
+                    <span class="logo">2025 End of Year Campaign</span>
+                </div>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="campaign-strategy.html" class="active" aria-current="page">Campaign Strategy</a></li>
+                <li><a href="campaign-calendar.html">Campaign Calendar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="main-content"></div>
+
+    <div class="header">
+        <h1>📅 REVISED: "Sprint to Dec 13" Campaign Calendar</h1>
+        <p>Hispanic Alliance 15th Anniversary Quinceañera Campaign</p>
+        <p style="margin-top: 10px; font-size: 1rem;">Heavy Activity: Nov 1 - Dec 13 | Light Touch: Dec 14-31</p>
+    </div>
+
+    <div class="strategy-box">
+        <h2>🎯 The New Strategy: "Homes for the Holiday = Finish Line"</h2>
+        <div class="big-idea">
+            Campaign CLIMAX = December 13<br>
+            Not "final push" — it's the CELEBRATION of campaign success
+        </div>
+        
+        <div class="comparison">
+            <div class="comparison-box old-way">
+                <h3>❌ Old Timeline (Exhausting)</h3>
+                <ul style="margin-left: 20px; line-height: 2;">
+                    <li>Mail drops mid-November</li>
+                    <li>Peak activity Dec 15-31</li>
+                    <li>Event = mid-campaign</li>
+                    <li>Staff working Christmas week</li>
+                    <li>Burnout risk: HIGH</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-box new-way">
+                <h3>✅ New Timeline (Strategic)</h3>
+                <ul style="margin-left: 20px; line-height: 2;">
+                    <li>Mail drops early November</li>
+                    <li>Peak activity Nov 11-Dec 13</li>
+                    <li>Event = campaign celebration</li>
+                    <li>Staff has normal holiday</li>
+                    <li>Burnout risk: LOW</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color vip"></div>
+            <span><strong>1A - VIP Donors</strong></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color active"></div>
+            <span><strong>1B - Active Multi-Year</strong></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color lapsed"></div>
+            <span><strong>2A/2B - Lapsed</strong></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color first-time"></div>
+            <span><strong>1C - First-Time 2025</strong></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color event"></div>
+            <span><strong>Events</strong></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color maintenance"></div>
+            <span><strong>Light Touch/Maintenance</strong></span>
+        </div>
+    </div>
+
+    <!-- OCTOBER PREP -->
+    <div class="month-section">
+        <div class="month-header">OCTOBER 2025 - PRE-LAUNCH</div>
+        
+        <div class="week">
+            <div class="week-label">October 21-31</div>
+            
+            <div class="milestone">
+                <div class="milestone-title">🎬 PRE-LAUNCH PHASE</div>
+                Get everything ready BEFORE November 1 launch
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Oct 21-25</div>
+                <div class="task-segment vip">1A - VIP</div>
+                <div class="task-description">
+                    <strong>VIP List Planning:</strong> ED + Board Chair divide 25 VIPs. Research giving history. Prepare personalized talking points.
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Oct 21-28</div>
+                <div class="task-segment active">ALL SEGMENTS</div>
+                <div class="task-description">
+                    <strong>Mail Design Finalization:</strong> Both tri-fold versions + letters + reply cards approved and print-ready
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Oct 28-31</div>
+                <div class="task-segment active">ALL SEGMENTS</div>
+                <div class="task-description">
+                    <strong>Export Mailing Lists:</strong> Pull final lists from eTapestry. Clean addresses. Prep reply cards.
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Oct 28-31</div>
+                <div class="task-segment vip">1A - VIP</div>
+                <div class="task-description">
+                    <strong>VIP Outreach Begins:</strong> Start calling to schedule early November meetings
+                </div>
+            </div>
+            
+            <div class="notes">
+                <div class="notes-title">🎯 Goal for Oct 31:</div>
+                All mail pieces at printer. VIP meeting calendar filling up. Campaign ready to launch Nov 1.
+            </div>
+        </div>
+    </div>
+
+    <!-- NOVEMBER -->
+    <div class="month-section">
+        <div class="month-header">NOVEMBER 2025</div>
+        
+        <!-- Week 1: Nov 1-7 -->
+        <div class="week">
+            <div class="week-label">Week 1: November 1-7</div>
+            
+            <div class="milestone">
+                <div class="milestone-title">🚀 CAMPAIGN LAUNCH WEEK</div>
+                All mail drops this week. Campaign publicly launches.
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 3-4</div>
+                <div class="task-segment lapsed">2A/2B - Lapsed</div>
+                <div class="task-description">
+                    <strong>MAIL DROP: "We Miss You" Package</strong> → 94 pieces
+                    <br>Arrives in mailboxes by Nov 5-7
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 4-5</div>
+                <div class="task-segment active">1B/1C - Active</div>
+                <div class="task-description">
+                    <strong>MAIL DROP: "Thank You + Finish Strong" Package</strong> → 145 pieces
+                    <br>Arrives in mailboxes by Nov 6-8
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 1-7</div>
+                <div class="task-segment vip">1A - VIP</div>
+                <div class="task-description">
+                    <strong>VIP Cultivation Meetings:</strong> Begin one-on-one meetings. Focus on gratitude and impact stories.
+                </div>
+            </div>
+            
+            <div class="notes">
+                <div class="notes-title">📬 Why Mail NOW:</div>
+                Donors receive mail Nov 5-8, have full week to respond before Thanksgiving. Early = less rushed.
+            </div>
+        </div>
+
+        <!-- Week 2: Nov 8-14 -->
+        <div class="week">
+            <div class="week-label">Week 2: November 8-14</div>
+            
+            <div class="task">
+                <div class="task-date">Nov 10</div>
+                <div class="task-segment lapsed">2A/2B - Lapsed</div>
+                <div class="task-description">
+                    <strong>Email #1:</strong> "Remember when you said yes? Here's what's happened since"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 12</div>
+                <div class="task-segment active">1B - Active</div>
+                <div class="task-description">
+                    <strong>Email #1:</strong> "Thank you for being with us this milestone year"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 12</div>
+                <div class="task-segment first-time">1C - First-Time</div>
+                <div class="task-description">
+                    <strong>Email #1:</strong> "Your first gift made an impact—here's how"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 8-14</div>
+                <div class="task-segment vip">1A - VIP</div>
+                <div class="task-description">
+                    <strong>VIP Meetings Continue:</strong> Goal: Complete 15+ meetings by Nov 21
+                </div>
+            </div>
+        </div>
+
+        <!-- Week 3: Nov 15-21 -->
+        <div class="week">
+            <div class="week-label">Week 3: November 15-21</div>
+            
+            <div class="task">
+                <div class="task-date">Nov 17</div>
+                <div class="task-segment lapsed">2A/2B - Lapsed</div>
+                <div class="task-description">
+                    <strong>Email #2:</strong> "We're still building the table you helped create"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 18</div>
+                <div class="task-segment active">1B - Active</div>
+                <div class="task-description">
+                    <strong>Phone Calls:</strong> Board/staff call all $1,000+ donors
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 19</div>
+                <div class="task-segment first-time">1C - First-Time</div>
+                <div class="task-description">
+                    <strong>Email #2:</strong> "Become a repeat donor before year-end"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 15-21</div>
+                <div class="task-segment vip">1A - VIP</div>
+                <div class="task-description">
+                    <strong>VIP Follow-Up Calls:</strong> Begin making specific asks following meetings
+                </div>
+            </div>
+            
+            <div class="notes">
+                <div class="notes-title">🦃 Thanksgiving Week (Nov 22-28):</div>
+                Light communication week. Let current outreach breathe. Staff takes break.
+            </div>
+        </div>
+
+        <!-- Week 4: Nov 22-30 -->
+        <div class="week">
+            <div class="week-label">Week 4: November 22-30 (Thanksgiving)</div>
+            
+            <div class="light-week">
+                <div class="light-week-title">🦃 LIGHT WEEK - Thanksgiving</div>
+                Minimal outreach. Let donors enjoy holiday. Monitor gifts, but no major pushes.
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Nov 24</div>
+                <div class="task-segment active">ALL SEGMENTS</div>
+                <div class="task-description">
+                    <strong>Gratitude Email:</strong> Simple "Happy Thanksgiving" message to entire list (no ask)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DECEMBER -->
+    <div class="month-section">
+        <div class="month-header">DECEMBER 2025</div>
+        
+        <!-- Week 1: Dec 1-7 -->
+        <div class="week">
+            <div class="week-label">Week 1: December 1-7</div>
+            
+            <div class="milestone">
+                <div class="milestone-title">⚡ FINAL PUSH TO DEC 13</div>
+                Two-week sprint to Homes for the Holiday. All remaining outreach happens now.
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 1</div>
+                <div class="task-segment active">1B - Active</div>
+                <div class="task-description">
+                    <strong>Email #2:</strong> "Help us finish strong by Dec 13"
+                    <br>Position Dec 13 as deadline
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 1</div>
+                <div class="task-segment lapsed">2A/2B - Lapsed</div>
+                <div class="task-description">
+                    <strong>Email #3:</strong> "Join us at Homes for the Holiday—and give one more time"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 1</div>
+                <div class="task-segment first-time">1C - First-Time</div>
+                <div class="task-description">
+                    <strong>Email #3:</strong> "Celebrate with us on Dec 13—and give again"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 2</div>
+                <div class="task-segment prospect">3 - Prospect</div>
+                <div class="task-description">
+                    <strong>Email Invite:</strong> Homes for the Holiday + giving opportunity
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 1-7</div>
+                <div class="task-segment vip">1A - VIP</div>
+                <div class="task-description">
+                    <strong>Final VIP Asks:</strong> Close any remaining uncommitted VIPs
+                </div>
+            </div>
+        </div>
+
+        <!-- Week 2: Dec 8-13 -->
+        <div class="week">
+            <div class="week-label">Week 2: December 8-13 (EVENT WEEK)</div>
+            
+            <div class="milestone">
+                <div class="milestone-title">🏡 HOMES FOR THE HOLIDAY = CAMPAIGN CLIMAX</div>
+                This event is your campaign CELEBRATION and final major touchpoint
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 8</div>
+                <div class="task-segment active">ALL SEGMENTS</div>
+                <div class="task-description">
+                    <strong>Email Reminder:</strong> "5 days until Homes for the Holiday" + last chance to give
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 10</div>
+                <div class="task-segment active">ALL SEGMENTS</div>
+                <div class="task-description">
+                    <strong>SMS (Optional):</strong> "3 days until Homes for the Holiday—see you there!"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 13</div>
+                <div class="task-segment event">EVENT</div>
+                <div class="task-description">
+                    <strong>🏡 HOMES FOR THE HOLIDAY</strong>
+                    <br>• VIP private reception (early access)
+                    <br>• Campaign results announced
+                    <br>• Celebration of donors
+                    <br>• On-site giving stations
+                    <br>• Frame as: "Help us cross the finish line tonight!"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 13 PM</div>
+                <div class="task-segment vip">1A - VIP</div>
+                <div class="task-description">
+                    <strong>VIP Thank You Calls:</strong> ED calls all VIP donors who gave during campaign
+                </div>
+            </div>
+            
+            <div class="notes">
+                <div class="notes-title">🎯 Dec 13 Messaging:</div>
+                "Tonight we celebrate 15 years—and close our Quinceañera campaign! Join us in making this historic."
+            </div>
+        </div>
+
+        <!-- Week 3: Dec 14-21 (LIGHT) -->
+        <div class="week">
+            <div class="week-label">Week 3: December 14-21 (Maintenance Mode)</div>
+            
+            <div class="light-week">
+                <div class="light-week-title">✨ LIGHT TOUCH WEEK</div>
+                Campaign is mostly done. Just cleanup and stragglers. Staff gets normal holiday.
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 14</div>
+                <div class="task-segment active">ALL SEGMENTS</div>
+                <div class="task-description">
+                    <strong>Thank You Email:</strong> "Thank you for making our 15th year historic!"
+                    <br>Soft mention: "Gifts still accepted through Dec 31"
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 16</div>
+                <div class="task-segment lapsed">Uncommitted</div>
+                <div class="task-description">
+                    <strong>Email to Non-Responders:</strong> "It's not too late—2 weeks left to give in 2025"
+                </div>
+            </div>
+        </div>
+
+        <!-- Week 4: Dec 22-31 (VERY LIGHT) -->
+        <div class="week">
+            <div class="week-label">Week 4: December 22-31 (Holiday Week)</div>
+            
+            <div class="light-week">
+                <div class="light-week-title">🎄 MINIMAL ACTIVITY</div>
+                Automated emails only. Staff has normal holiday break.
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 26</div>
+                <div class="task-segment maintenance">AUTOMATED</div>
+                <div class="task-description">
+                    <strong>Automated Email:</strong> "5 days left to give in 2025" (sent to non-donors only)
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 30</div>
+                <div class="task-segment maintenance">AUTOMATED</div>
+                <div class="task-description">
+                    <strong>Automated Email:</strong> "Last 24 hours" (sent to non-donors only)
+                </div>
+            </div>
+            
+            <div class="task">
+                <div class="task-date">Dec 31</div>
+                <div class="task-segment maintenance">MONITORING</div>
+                <div class="task-description">
+                    <strong>Gift Processing:</strong> One staff member monitors online gifts throughout day. No outbound outreach.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCTION TIMELINE -->
+    <div class="month-section" style="background: #FFF3E0; border: 3px solid #F7921E;">
+        <div class="month-header" style="background: #F7921E;">⏰ REVISED PRODUCTION DEADLINES</div>
+        
+        <div class="task" style="border-left-color: #F7921E;">
+            <div class="task-date">Oct 18-21</div>
+            <div class="task-segment" style="background: #F7921E;">DESIGN</div>
+            <div class="task-description">
+                <strong>Finalize All Mail Pieces:</strong> Both versions approved and print-ready
+            </div>
+        </div>
+        
+        <div class="task" style="border-left-color: #F7921E;">
+            <div class="task-date">Oct 22-25</div>
+            <div class="task-segment" style="background: #F7921E;">LISTS</div>
+            <div class="task-description">
+                <strong>Export & Clean:</strong> Pull mailing lists, clean addresses, generate reply cards
+            </div>
+        </div>
+        
+        <div class="task" style="border-left-color: #F7921E;">
+            <div class="task-date">Oct 28-31</div>
+            <div class="task-segment" style="background: #F7921E;">PRINT</div>
+            <div class="task-description">
+                <strong>To Printer:</strong> All files delivered by Oct 31 for Nov 3-5 mail drop
+            </div>
+        </div>
+        
+        <div class="task" style="border-left-color: #F7921E;">
+            <div class="task-date">Nov 3-5</div>
+            <div class="task-segment" style="background: #F7921E;">MAIL</div>
+            <div class="task-description">
+                <strong>In Mailboxes:</strong> All pieces arrive Nov 5-8 (full week before Thanksgiving)
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKLOAD COMPARISON -->
+    <div class="month-section" style="background: #E3F2FD; border: 3px solid #01A2C4;">
+        <div class="month-header" style="background: #01A2C4;">📊 STAFF WORKLOAD: OLD vs NEW</div>
+        
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr style="background: #01A2C4; color: white;">
+                    <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Week</th>
+                    <th style="padding: 15px; text-align: center; border: 1px solid #ddd;">OLD Timeline<br>Hours/Week</th>
+                    <th style="padding: 15px; text-align: center; border: 1px solid #ddd;">NEW Timeline<br>Hours/Week</th>
+                    <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Difference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Nov 1-7</strong></td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd;">10-15</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #E8F5E9;"><strong>20-25</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">⬆️ More upfront</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Nov 8-14</strong></td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd;">15-20</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #E8F5E9;"><strong>25-30</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">⬆️ More upfront</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Nov 15-21</strong></td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd;">20-25</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #E8F5E9;"><strong>20-25</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">➡️ Same</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Nov 22-30</strong></td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd;">8-12</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #E8F5E9;"><strong>5-8</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">⬇️ Lighter</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Dec 1-7</strong></td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd;">25-30</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #E8F5E9;"><strong>20-25</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">⬇️ Lighter</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Dec 8-13</strong></td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd;">30-35</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #E8F5E9;"><strong>25-30</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">⬇️ Lighter</td>
+                </tr>
+                <tr style="background: #E8F5E9; font-weight: bold;">
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Dec 14-21</strong></td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #FFEBEE;">20-25</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #E8F5E9;"><strong>5-8</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">⬇️ MUCH Lighter ✨</td>
+                </tr>
+                <tr style="background: #E8F5E9; font-weight: bold;">
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Dec 22-31</strong></td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #FFEBEE;">35-40</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; background: #E8F5E9;"><strong>3-5</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">⬇️ MUCH Lighter ✨</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr style="background: #01A2C4; color: white; font-weight: bold;">
+                    <td style="padding: 15px; border: 1px solid #ddd;">TOTAL</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd;">163-202 hours</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd;">143-176 hours</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">20-26 hours SAVED</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #E8F5E9; border-radius: 10px;">
+            <h3 style="color: #57B847; margin-bottom: 15px;">✨ Key Benefit: Staff Gets Normal Holidays</h3>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                <strong>Dec 14-31 in NEW timeline:</strong> 8-13 total hours (vs. 55-65 in old timeline)<br>
+                <strong>That's 47-52 fewer hours during the holidays</strong> — your team can actually enjoy Hanukkah, Christmas, and New Year's without campaign stress.
+            </p>
+        </div>
+    </div>
+
+    <!-- KEY MESSAGING CHANGES -->
+    <div class="month-section" style="background: #F3E5F5; border: 3px solid #4D3F99;">
+        <div class="month-header" style="background: #4D3F99;">💬 REVISED MESSAGING FRAMEWORK</div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+            <div>
+                <h3 style="color: #4D3F99; margin-bottom: 15px; font-size: 1.5rem;">OLD Messaging (Dec 31 Deadline)</h3>
+                <div style="background: #FFEBEE; padding: 20px; border-radius: 10px; border: 2px solid #DA3335;">
+                    <p style="margin-bottom: 15px;"><strong>Problem:</strong></p>
+                    <ul style="margin-left: 20px; line-height: 2;">
+                        <li>"Give by Dec 31" = Everyone procrastinates</li>
+                        <li>Creates Dec 22-31 crunch</li>
+                        <li>Donors feel rushed, staff feels stressed</li>
+                        <li>Dec 31 = tax deadline only</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <h3 style="color: #57B847; margin-bottom: 15px; font-size: 1.5rem;">NEW Messaging (Dec 13 Deadline)</h3>
+                <div style="background: #E8F5E9; padding: 20px; border-radius: 10px; border: 2px solid #57B847;">
+                    <p style="margin-bottom: 15px;"><strong>Solution:</strong></p>
+                    <ul style="margin-left: 20px; line-height: 2;">
+                        <li>"Give by Dec 13" = Creates urgency earlier</li>
+                        <li>Dec 13 = Celebration, not deadline</li>
+                        <li>Donors feel invited, not pressured</li>
+                        <li>Dec 31 = "stragglers welcome" bonus window</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 30px; background: white; border-radius: 10px; border: 3px solid #4D3F99;">
+            <h3 style="color: #4D3F99; margin-bottom: 20px; font-size: 1.5rem;">📝 Sample Messaging (NEW Timeline)</h3>
+            
+            <div style="margin-bottom: 25px;">
+                <div style="background: #F3E5F5; padding: 15px; border-left: 4px solid #4D3F99; margin-bottom: 10px;">
+                    <strong style="color: #4D3F99;">Email Subject Line (Nov 12):</strong>
+                </div>
+                <p style="font-size: 1.1rem; padding-left: 20px;">
+                    "Join us for Homes for the Holiday on Dec 13—and help us finish our Quinceañera year strong"
+                </p>
+            </div>
+            
+            <div style="margin-bottom: 25px;">
+                <div style="background: #F3E5F5; padding: 15px; border-left: 4px solid #4D3F99; margin-bottom: 10px;">
+                    <strong style="color: #4D3F99;">Email Body (Dec 1):</strong>
+                </div>
+                <p style="font-size: 1.1rem; padding-left: 20px; line-height: 1.8;">
+                    "On December 13, we'll gather at Homes for the Holiday to celebrate our 15th anniversary and close our Quinceañera campaign. We'd love for you to join us—and to be part of the final push to finish this historic year strong. Give before Dec 13 and celebrate with us!"
+                </p>
+            </div>
+            
+            <div style="margin-bottom: 25px;">
+                <div style="background: #F3E5F5; padding: 15px; border-left: 4px solid #4D3F99; margin-bottom: 10px;">
+                    <strong style="color: #4D3F99;">At Event (Dec 13):</strong>
+                </div>
+                <p style="font-size: 1.1rem; padding-left: 20px; line-height: 1.8;">
+                    "Thank you for being here tonight! Because of your generosity, we're on track to close our 15th year with over $XXX,000 raised. If you haven't given yet, we have giving stations set up—help us cross the finish line tonight!"
+                </p>
+            </div>
+            
+            <div>
+                <div style="background: #F3E5F5; padding: 15px; border-left: 4px solid #4D3F99; margin-bottom: 10px;">
+                    <strong style="color: #4D3F99;">Post-Event Email (Dec 14):</strong>
+                </div>
+                <p style="font-size: 1.1rem; padding-left: 20px; line-height: 1.8;">
+                    "What a night! Thank you to everyone who joined us at Homes for the Holiday and helped us close our Quinceañera campaign. We raised $XXX,000 from XXX donors—an incredible finish to our 15th year. If you missed the celebration, you can still give through Dec 31 to be part of this historic milestone."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- REVENUE PROJECTION -->
+    <div class="month-section" style="background: #E8F5E9; border: 3px solid #57B847;">
+        <div class="month-header" style="background: #57B847;">💰 REVISED REVENUE PROJECTION</div>
+        
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr style="background: #57B847; color: white;">
+                    <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Period</th>
+                    <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Activity</th>
+                    <th style="padding: 15px; text-align: center; border: 1px solid #ddd;">Projected Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Nov 1-14</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">Mail arrives, emails launch, early VIP gifts</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; font-weight: bold;">$40K-$60K</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Nov 15-30</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">VIP meetings close, active donors respond</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; font-weight: bold;">$50K-$70K</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Dec 1-13</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">Final push, event gifts, lapsed respond</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; font-weight: bold;">$60K-$80K</td>
+                </tr>
+                <tr style="background: #E8F5E9;">
+                    <td style="padding: 15px; border: 1px solid #ddd;"><strong>Dec 14-31</strong></td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">Stragglers, automated emails</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; font-weight: bold;">$20K-$30K</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr style="background: #57B847; color: white; font-weight: bold;">
+                    <td colspan="2" style="padding: 15px; border: 1px solid #ddd;">TOTAL PROJECTED</td>
+                    <td style="padding: 15px; text-align: center; border: 1px solid #ddd; font-size: 1.3rem;">$170K-$240K</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <div style="margin-top: 30px; padding: 20px; background: white; border-radius: 10px;">
+            <h3 style="color: #57B847; margin-bottom: 15px;">💡 Why This Works:</h3>
+            <ul style="margin-left: 20px; line-height: 2; font-size: 1.1rem;">
+                <li><strong>70-80% of revenue by Dec 13</strong> = Campaign is "done" when event happens</li>
+                <li><strong>Dec 14-31 = bonus window</strong> = No pressure, just gravy</li>
+                <li><strong>Early asks = less competition</strong> = Donors haven't maxed out giving yet</li>
+                <li><strong>Dec 13 celebration = social proof</strong> = "Everyone's giving, join us!"</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div style="background: linear-gradient(135deg, #BD1E4D 0%, #F82466 100%); color: white; padding: 40px; border-radius: 10px; text-align: center; margin-top: 30px;">
+        <h2 style="margin-bottom: 20px; font-size: 2.5rem;">🎯 Why This Timeline is BETTER</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px;">
+            <div>
+                <div style="font-size: 3rem; margin-bottom: 10px;">✨</div>
+                <div style="font-size: 1.3rem; font-weight: bold; margin-bottom: 10px;">Staff Well-Being</div>
+                <div style="font-size: 1rem;">Normal holidays, less burnout, sustainable pace</div>
+            </div>
+            <div>
+                <div style="font-size: 3rem; margin-bottom: 10px;">🎉</div>
+                <div style="font-size: 1.3rem; font-weight: bold; margin-bottom: 10px;">Event Impact</div>
+                <div style="font-size: 1rem;">Dec 13 becomes celebration of success, not mid-campaign</div>
+            </div>
+            <div>
+                <div style="font-size: 3rem; margin-bottom: 10px;">💰</div>
+                <div style="font-size: 1.3rem; font-weight: bold; margin-bottom: 10px;">Revenue</div>
+                <div style="font-size: 1rem;">Same or better results with less stress</div>
+            </div>
+            <div>
+                <div style="font-size: 3rem; margin-bottom: 10px;">⏰</div>
+                <div style="font-size: 1.3rem; font-weight: bold; margin-bottom: 10px;">Donor Experience</div>
+                <div style="font-size: 1rem;">Less rushed, more thoughtful, earlier asks</div>
+            </div>
+        </div>
+        <p style="margin-top: 40px; font-size: 1.3rem;">Work smarter, not harder. Finish strong by Dec 13! 🚀</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; color: #595959; font-size: 0.9rem;">
+        <p>Hispanic Alliance | REVISED 15th Anniversary Campaign Calendar</p>
+        <p style="margin-top: 10px;">Updated: October 2025 | "Sprint to Dec 13" Strategy</p>
+    </div>
+
+    <!-- Mobile Navigation Script -->
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks && navLinks.classList.contains('active')) {
+                if (!e.target.closest('.nav-container')) {
+                    navLinks.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+
+        // Close mobile menu when link is clicked
+        const navLinkItems = document.querySelectorAll('.nav-links a');
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+</body>
+</html>
