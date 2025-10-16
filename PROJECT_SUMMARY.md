@@ -208,10 +208,10 @@ Neutrals:
 
 | Metric | Target |
 |--------|--------|
-| Total Revenue | $170K-$240K |
-| Lapsed Reactivations | 50-75 donors |
-| New Monthly Donors | 30-50 |
-| VIP Commitments | 18-22 of 25 |
+| Total Revenue | $50K |
+| Lapsed Reactivations | 25-50 donors |
+| New Monthly Donors | 10-20 |
+| First-Time Renewals | 10-15 donors |
 | Campaign Finish Line | **December 13, 2025** |
 
 ---

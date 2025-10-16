@@ -12,7 +12,7 @@ This strategic campaign positions Homes for the Holiday (December 13) as the cam
 
 - ✅ Better donor experience (less rushed, more thoughtful giving)
 - ✅ Improved staff well-being (normal holidays, sustainable execution)
-- ✅ Same or better revenue ($170K-$240K projected)
+- ✅ Attainable revenue goal ($50K projected)
 - ✅ Enhanced event impact (celebration, not mid-campaign touchpoint)
 
 ## 📚 Contents
@@ -81,11 +81,11 @@ Visit the GitHub Pages site: `[Your GitHub Pages URL will go here]`
 
 | Metric | Target |
 |--------|--------|
-| **Total Revenue** | $170K-$240K |
-| **Lapsed Reactivations** | 50-75 donors |
-| **New Monthly Donors** | 30-50 (Amigos Monthly Circle) |
-| **VIP Commitments** | 18-22 of top 25 |
-| **First-Time Renewals** | 20-30 donors |
+| **Total Revenue** | $50K |
+| **Lapsed Reactivations** | 25-50 donors |
+| **New Monthly Donors** | 10-20 (Amigos Monthly Circle) |
+| **Campaign Finish Line** | December 13 |
+| **First-Time Renewals** | 10-15 donors |
 
 ## 🎨 Branding
 
